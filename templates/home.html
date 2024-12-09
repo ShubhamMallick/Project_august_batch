@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FWI Prediction</title>
-    <link rel="stylesheet" href="static/style.css">
+    <!-- Use url_for to reference the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="login">
@@ -15,12 +16,10 @@
             <input type="text" name="Temperature" placeholder="Temperature (°C)" required /><br>
             <input type="text" name="RH" placeholder="Relative Humidity (%)" required /><br>
             <input type="text" name="Ws" placeholder="Wind Speed (km/h)" required /><br>
-            <input type="text" name="Rain" placeholder="Rain (mm)" required /><br>
             <input type="text" name="FFMC" placeholder="Fine Fuel Moisture Code" required /><br>
             <input type="text" name="DMC" placeholder="Duff Moisture Code" required /><br>
             <input type="text" name="ISI" placeholder="Initial Spread Index" required /><br>
             <input type="text" name="BUI" placeholder="Buildup Index" required /><br>
-            <input type="text" name="FWI" placeholder="FWI (This can be left blank)" /><br>
     
             <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
         </form>
