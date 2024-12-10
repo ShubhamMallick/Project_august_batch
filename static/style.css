@@ -21,6 +21,8 @@ body {
     width: 100%;
     text-align: center;
     color: #333333;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
 /* Heading Styling */
@@ -29,6 +31,7 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
     color: #333333;
+    animation: slideIn 0.5s ease-out forwards;
 }
 
 /* Input Field Styling */
@@ -41,6 +44,8 @@ body {
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
 .login input:focus {
@@ -60,6 +65,8 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
 .login button:hover {
@@ -73,6 +80,8 @@ body {
     font-size: 18px;
     color: #333333;
     font-weight: normal;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
 /* Responsive Design */
@@ -91,5 +100,24 @@ body {
 
     .login button {
         font-size: 16px;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
