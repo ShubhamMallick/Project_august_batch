@@ -37,12 +37,12 @@ def predict_datapoint():
         ISI = float(request.form.get('ISI'))
         BUI = float(request.form.get('BUI'))
 
-        # Add placeholders (0s) for the missing 4 features
-        input_features = [Temperature, RH, Ws, FFMC, DMC, ISI, BUI, 0, 0, 0, 0]
+        # Only pass the relevant features to the model
+        input_features = [Temperature, RH, Ws, FFMC, DMC, ISI, BUI]
 
         # Preprocess and predict
-        new_data = scaler.transform([input_features])
-        predict = model.predict(new_data)
+        new_data = scaler.transform([input_features])  # Transform using scaler
+        predict = model.predict(new_data)  # Predict with the model
 
         # Return the prediction result
         if predict[0] == 1:
