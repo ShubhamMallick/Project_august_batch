@@ -37,10 +37,14 @@ def predict_datapoint():
         ISI = float(request.form.get('ISI'))
         BUI = float(request.form.get('BUI'))
 
+        # Add placeholders (0s) for the missing 4 features
+        input_features = [Temperature, RH, Ws, FFMC, DMC, ISI, BUI, 0, 0, 0, 0]
+
         # Preprocess and predict
-        new_data = scaler.transform([[Temperature, RH, Ws, FFMC, DMC, ISI, BUI]])
+        new_data = scaler.transform([input_features])
         predict = model.predict(new_data)
 
+        # Return the prediction result
         if predict[0] == 1:
             result = 'Fire'
         else:
