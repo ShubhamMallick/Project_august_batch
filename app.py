@@ -7,8 +7,8 @@ application = Flask(__name__)
 app = application
 
 # Load scaler and model
-scaler = pickle.load(open(r"C:\Users\aditya\Desktop\Pregrad\Pregrad_august\Model\standardScaler.pkl", "rb"))
-model = pickle.load(open(r"C:\Users\aditya\Desktop\Pregrad\Pregrad_august\Model\modelForPrediction.pkl", "rb"))
+scaler = pickle.load(open(r"C:\Users\aditya\Desktop\Pregrad\Pregrad_august\Model\MinMaxScaler.pkl", "rb"))
+model = pickle.load(open(r"C:\Users\aditya\Desktop\Pregrad\Pregrad_august\Model\Classification.pkl", "rb"))
 
 # Favicon route
 @app.route('/favicon.ico')
