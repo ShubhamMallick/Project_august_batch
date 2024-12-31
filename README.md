@@ -1,6 +1,3 @@
-Here's the integrated `README.md` that combines both of your provided descriptions in a coherent and sequential order:
-
-````markdown
 # Forest Fire Prediction Project
 
 This project aims to predict forest fire occurrences based on meteorological and environmental features using a **Logistic Regression** model. The dataset contains various features, such as temperature, humidity, wind speed, and other environmental factors, which are crucial for predicting the likelihood of forest fires. The target variable is binary: **0** indicates no fire, and **1** indicates that a fire occurred.
@@ -85,6 +82,7 @@ import pickle
 with open('Classification.pkl', 'rb') as file:
     model = pickle.load(file)
 ```
+
 ````
 
 ## How to Use
@@ -136,3 +134,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This `README.md` is a complete, coherent file combining details of both your project and dataset, from preprocessing and model training to installation and usage instructions.
 ```
+````
