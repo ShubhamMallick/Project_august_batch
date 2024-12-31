@@ -83,8 +83,6 @@ with open('Classification.pkl', 'rb') as file:
     model = pickle.load(file)
 ```
 
-````
-
 ## How to Use
 
 1. Clone this repository to your local machine.
@@ -129,9 +127,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgements
 
 - Dataset: **Algerian Forest Fire Dataset**, available on [Kaggle](https://www.kaggle.com/).
-
-```
-
-This `README.md` is a complete, coherent file combining details of both your project and dataset, from preprocessing and model training to installation and usage instructions.
-```
-````
